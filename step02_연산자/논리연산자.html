@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자03 - 논리연산자</title>
+</head>
+
+<body>
+    <pre>
+        논리 연산자란?
+        - 주어진 조건을 논리적으로 연산하여 참(true)또는 거짓(false)으로 반환한다.
+        1.일반논리연산자
+        - 두개의 피연산자를 대항으로 하는 논리곱(AND), 논리합(OR)과 한개의 피연산자를 대상으로하는 논리부정(NOT)이 있다.
+        * 논리곱(AND) && - 두개의 피연산자가 모두 참일때 참, 하나라도 거짓이면 거짓
+        * 논리합(OR) || - 두개의 피연산자가 하나라도 참일때 참, 모두 거짓이면 거짓
+        * 논리부정(NOT) !- 피연산자 값이 참이면 거짓, 거짓이면 참
+        
+        2.비트논리연산자
+        - 기억 장소에 저장된 이진값 즉0,1을 대상으로 연산하는 연산자
+        * 비트곱(AND) & - 두 비트 모두 1일때만 1이고, 하나라도 0이면 0
+        * 비트합(OR) | - 두 비트 중 하나라도 1이면 1이고, 모두 0이면 0
+        * 비트부정(NOT) ~ - 비트 값이 1이면0, 0이면 1
+        * 배타적 비트합(XOR) ^ - 두 비트가 같을 때 0,다를때 1
+    </pre>
+
+
+
+
+    <script>
+        let 참 = true;
+        let 거짓 = false;
+        const a = '신화영'
+
+        console.log(참, 거짓);
+
+        console.log(!참, !거짓); // ! NOT 부정연산자. 참이면 거짓, 거짓이면 참
+
+        console.log(참 && 거짓, 참 && 참, 거짓 && 거짓) // AND 연산자. - 두개다 참일 때 참, 하나라도 거짓이면 거짓 (교집합이라 생각하기/ 예 - 스크롤애니메이션이나 작용?이 특정부분에서 일어날때 씀)
+
+        console.log(거짓 || 참, 참 || 참, 거짓 || 거짓) // OR 연산자. - 하나라도 참이면 참, 모두 거짓이면 거짓
+
+        a ? console.log(a + '진실한 너') : console.log('못땐 넘')
+        // if else 문으로 변경
+        if (a) {
+            console.log(a + '진실한 너')
+        } else {
+            console.log('못땐 넘')
+        }
+
+        /*  if (!a) {
+             console.log(a + '진실한 너')
+         } else {
+             console.log('못땐 넘')
+         } */
+
+        a && console.log(a + '진실한 너')
+        // if else 문으로 변경
+        if (a) {
+            console.log(a + '진실한 너')
+        }
+
+        !a || console.log('못땐 넘'); // 앞에 이미 참이어서 뒤에껀 보지도 않음 !없을때 - 결과 판별안함, 거짓이면 판별 함 결과 - 못땐넘
+
+
+        const Test = () => {
+            return (
+                a ? <h2>반가워</h2> : <h2>돌아가</h2>
+            )
+        }
+
+
+    </script>
+</body>
+
+</html>

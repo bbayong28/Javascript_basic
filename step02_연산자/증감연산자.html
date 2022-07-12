@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자05 - 증감연산자</title>
+</head>
+
+<body>
+    <pre>
+        증감 연산자란? 
+
+        *증가연산자(++) 변숫값을 증가시킴. 변수의 앞 혹은 뒤에 붙어서 전위증가 또는 후위증가로 사용하는데 결괏값은 같음
+        *감소연산자(--) 변숫값을 감소시킴. 변수의 앞 혹은 뒤에 붙어서 전위감소 또는 후위감소로 사용하는데 결괏값은 같음
+
+        '전위'는 연산과정에서 변수를 먼저 사용한 후 연산하는 것
+        '후위'는 연산과정에서 연산먼저하고 변수를 사용하는 것
+    </pre>
+
+
+
+    <script>
+        let a = 1;
+        console.log(a++);      // 결과 1
+        console.log(a);      // 결과 2
+        console.log(++a);      // 결과 3
+
+        let b = 1;
+        console.log(b--);      // 결과 1
+        console.log(b);      // 결과 0
+        console.log(--b);      // 결과 -1
+
+
+    </script>
+</body>
+
+</html>

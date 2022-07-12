@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자04 - 비교연산자</title>
+</head>
+
+<body>
+
+    <pre>
+        비교 연산자란?
+        - 두 피연산자의 값을비교하여 참(true)또는 거짓(false)으로 반환한다.
+
+        * == - 값이 같은지 비교한다.
+        * === - 값과 타입이 같은지 비교한다.
+        * != - 값이 다른지 비교한다.
+        * !== - 값 또는 타입이 다른지 비교한다.
+    </pre>
+
+
+    <script>
+        let a = 1;
+        let b = '1';
+
+        console.log(a == b); //결과 true로나옴 자바스크립트의 약점 - 값이 같다는 얘기(1과 1)
+        console.log(a === b); //결과 false로 나옴 - 값과 타입이 같은지 비교(number과 string)
+        console.log(a > b);//결과 false로 나옴                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+        console.log(a < b);//결과 false로 나옴
+        console.log(a <= b); //결과 true로 나옴
+        console.log(a >= b); //결과 true로 나옴
+
+
+        console.log(a !== b);  //결과 true로 나옴 - 값 또는 타입이 다른지 비교한다.
+        console.log(a != b); ////결과 false로 나옴 - 값이 다른지 비교한다.
+    </script>
+</body>
+
+</html>
