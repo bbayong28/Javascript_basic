@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 01</title>
+</head>
+
+<body>
+    <!--<div id="App"></div> -> <App />  많이 보게 될 태그 -->
+
+    <div id="App"></div>
+
+
+    <script>
+
+        이름('신화영', '잔다.'); //신화영 잔다
+
+        function 이름(a, b) {
+            console.log(a, b)
+        }
+
+        //이름('b'); //b undefined
+        //이름('c'); //c undefined
+        //이름('d'); //d undefined
+        //이름('shinhwayeong'); //shinhwayeong undefined
+
+
+
+        //함수표현식 변수에 담긴 함수는 호이스팅 되지 않는다.
+        const 이름2 = function (a) {
+            console.log(a) // 나함수
+        }
+
+        이름2('나함수');
+
+
+        //화살표 함수 표현식 arrow function 
+
+        //const 이름3 = (a) => {
+        //    console.log(a) //나 화살표 함수
+        //}
+
+        //이름3('나 화살표 함수');
+
+
+        const 이름3 = a => console.log(a);
+        const 이름4 = (a, b) => console.log(a, b); // a,b 가 되면 괄호!! 
+
+        이름3('나 화살표 함수');
+        이름4('나 화살표 함수', '아이고');
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
