@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 01 - 개발자 객체 만들기</title>
+</head>
+
+<body>
+    <p id="const1"></p>
+    <p id="const2"></p>
+    <p id="const3"></p>
+
+    <div id="App">객체 만들기</div>
+    <div id="This">객체 만들기</div>
+
+
+
+    <script>
+
+        const car = {
+            name: 'Sonota',
+            speed: 100,
+            color: 'white'
+        };
+
+        document.getElementById("const1").innerHTML = "자동차 이름 : " + car['name'];
+        document.getElementById("const2").innerHTML = "자동차 속도 : " + car.speed;
+        document.getElementById("const3").innerHTML = "자동차 색상 : " + car.color;
+
+
+
+        //  1. 객체 리터럴 표기법을 이용한 객체의 생성
+        const 신화영 = {
+            name: '신화영',
+            age: 28,
+        }
+
+        console.log(신화영.name + `바보`);
+
+        //  2. 객체 생성자함수를 이용한 객체의 생성  new + 대문자로시작!
+        const 이주성 = new Object();
+        이주성.name = '이주성'
+        이주성.age = 29;
+
+        console.log(이주성);
+
+        //  3. 객체의 메소드 : 객체는 속성(property)과 함수(method)를 가진다. property(key : value)
+
+        const 김지연 = {
+            name: '김지연',
+            하는일: function () {
+                console.log(김지연.name + `회사의 발전위해 ${김지연.name}은 폭풍 퍼블리싱을 한다.`)
+            }
+        }
+
+        console.log(김지연['name'], 김지연.name);
+
+        김지연.하는일();
+
+        //  4. 객체에서의 this
+        //  `${this.name}과 함께 공부하기...` = this.name + '과 함께 공부하기...'
+        const 이혜빈 = {
+            name: '이혜빈',
+            age: 28,
+            하는일: function () {
+                console.log(`${this.name}과 함께 공부하기...`)
+            }
+        }
+
+        이혜빈.하는일();
+
+        //  5. 객체의 메소드로 () => 화살표 함수를 쓰면 this는 ?
+
+        const 하수민 = {
+            name: '하수민',
+            age: 15,
+            하는일: () => {
+                console.log(`${하수민.name}은 아침부터 열정적으로 요가를 가르침`)
+            }
+        }
+
+        하수민.하는일();
+
+        //  6. 객체안 일반적인 함수(무명)에서의 this 바인딩...
+
+        const shin = {
+            name: 'hwayeong',
+            job: function () {
+                setInterval(() => {
+                    console.log(this.name + '술 마시기')
+                }, 1000)
+            }
+        }
+
+        shin.job();
+
+
+        //  etc. 이벤트리스너에서의 this
+        //  id는 바로선택이 가능하지만 권장하는 방법이 아닙니다. (그냥 실습용으로 해봄)
+        //  document.querySelector('#App'), document.getElementById('App')
+
+        App.addEventListener('click', () => {
+            console.log(this) //화살표함수에서의 this는 window;
+        });
+
+        console.log(this, name) //this는 window;
+
+
+    </script>
+</body>
+
+</html>
