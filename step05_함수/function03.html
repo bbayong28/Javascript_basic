@@ -26,6 +26,7 @@
         //화살표 함수에서의 this
 
         const App = document.querySelector('#App');
+        const UL = document.querySelector('#UL');
 
         //function 이름() {
         //    console.log('shinhwayeong')
@@ -49,7 +50,10 @@
 
             //스프레드 연산자 어려운 거고 나중에 배울 것들... ECMA6
             const AllLI = [...UL.children];
-            console.log(AllLI);
+            // 번호 받아오기
+            let idx = AllLI.indexOf(TG);
+            console.log(idx)
+            console.log(AllLI); // click한 것의 번호를 받아옴... 텝메뉴에 쓰일 거임.
             AllLI.forEach(e => e.style.color = '')
             TG.style.color = "#f00"
         })
