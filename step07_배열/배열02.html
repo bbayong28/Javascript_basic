@@ -13,19 +13,31 @@
     <script>
 
         // 1. 배열을 돌아서(순회) 배열 각각을 표현 - 일반 for.;
-        const 걍배열 = [1, 2, 3, 4, 5];
+        const 걍배열 = ['하나', '둘', '셋', '넷', '다섯'];
 
-        console.log(걍배열); //Array(5)
+        console.log(걍배열); //(5) ['하나', '둘', '셋', '넷', '다섯']
         console.log(걍배열.length); //5
 
         //초기값, 비교값, 증가값
 
         for (i = 0; i < 걍배열.length; i++) {
-            console.log(걍배열[i]); // 1 2 3 4 5 한줄씩 찍힘
+            console.log(걍배열[i]); // 하나 둘 셋 넷 다섯
         }
 
-        for (i = 0; i < 걍배열.length; i--) {
-            console.log(걍배열[i]);
+        for (i = 걍배열.length - 1; i >= 0; i--) {
+            console.log(걍배열[i]); // 다섯 넷 셋 둘 하나
+        }
+
+        // for ... in문.  i는 index key를(index값) 반환한다.
+
+        for (i in 걍배열) {
+            console.log(i); // 0 1 2 3 4
+        }
+
+        // for ... of문.  i는 value를(배열값) 반환한다.
+
+        for (i of 걍배열) {
+            console.log(i);  // 하나 둘 셋 넷 다섯
         }
 
 
