@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="date"></div>
+
+    <script>
+        const 날짜 = new Date();
+        const 요일 = ['일', '월', '화', '수', '목', '금', '토'];
+
+        const DATE = document.querySelector('.date')
+        //DATE.innerHTML = 날짜.toLocaleString();  //2022. 7. 22. 오전 10:23:14
+        //DATE.innerHTML = 날짜.toLocaleDateString();  //2022. 7. 22.
+        //DATE.innerHTML = 날짜.toDateString();  //Fri Jul 22 2022
+
+        DATE.innerHTML += 날짜.toLocaleString() + '<br/>';//게시판 글같은거 언제썼는지 뿌려줄 때 사용
+        DATE.innerHTML += 날짜.toLocaleDateString() + '<br/>';
+        DATE.innerHTML += 날짜.getFullYear() + '<br/>'; //2022
+        DATE.innerHTML += 날짜.getMonth() + 1 + '<br/>'; //7 0 1 2 3 4 5 
+        DATE.innerHTML += 날짜.getDay() + '<br/>'; //5(요일) 0 1 2 3 4 5 -> 일 월 화 수 목 금
+        DATE.innerHTML += 날짜.getDate() + '<br/>'; //22
+        DATE.innerHTML += 요일[날짜.getDay()] + '요일 <br/>'; //22
+
+        //참고 사이트 : https://ngio.co.kr/10075
+
+    </script>
+
+
+</body>
+
+</html>
